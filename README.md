@@ -2,8 +2,8 @@
 
 _This project is due Friday, 2015-11-20 @ 11:55 PM EST._
 
-Skeleton code for the Calculator project assigned to the students in Michael E. 
-Cotterell's Fall 2015 CSCI 1302 class at the University of Georgia. **Please read 
+Skeleton code for the Calculator project assigned to the students in the
+Fall 2015 CSCI 1302 classes at the University of Georgia. **Please read 
 the entirety of this file before beginning your project.**
 
 ## Academic Honesty
@@ -322,10 +322,16 @@ presented below will be used as a backup in case something goes wrong.
 
 You will still be submitting your project via <code>nike</code>. Make sure your 
 work is on <code>nike.cs.uga.edu</code> in a directory called 
-<code>LastName1-LastName2-p3</code>, and, from within the parent directory, 
-execute the following command:
+<code>LastName1-LastName2-p3</code>, and, from within the parent directory,
+execute the following command, depending on which section you are in:
 
-    $ submit LastName1-LastName2-p3 cs1302a
+### Supa' Mike's (Cotterell's) Section
+
+    $ submit LastName-FirstName-p2 cs1302a
+
+### Alothman's Section
+
+    $ submit LastName-FirstName-p2 cs1302b
 
 It is also a good idea to email a copy to yourself. To do this, simply execute 
 the following command, replacing the email address with your email address:
