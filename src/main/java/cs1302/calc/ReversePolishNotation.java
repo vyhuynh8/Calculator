@@ -117,7 +117,7 @@ public class ReversePolishNotation {
      * @return the result of evaluating the expression
      * @throws MalformedPostfixException  when the postfix expression is malformed
      */
-    public static int evaluate(Math impl, String[] postfix) throws StackOverflowError, MalformedPostfixException {
+    public static int evaluate(Math impl, String[] postfix) throws StackOverflowError, MalformedPostfixException, ArithmeticException {
 
         // a stack for implementing the evaluation
         Stack<Integer> stack = new Stack<Integer>();
@@ -182,6 +182,11 @@ public class ReversePolishNotation {
                 } // if
 
             } // for
+
+	} catch (ArithmeticException ae) {
+	    
+	    // propagate an arithmetic exception
+	    throw ae;
 
         } catch (Exception e) {
             
