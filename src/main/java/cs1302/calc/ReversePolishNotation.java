@@ -11,11 +11,13 @@ import java.util.Stack;
  * Contains static methods for working with the Reverse Polish Notation of
  * certain mathematical expressions.
  *
- * The following binary operations are supported: addition (+), 
+ * <p>
+ * The following binary operations are supported: addition (+),
  * subtraction (-), multiplication (*), division(/), and exponentiation (^).
- * Note that ^ is used here for exponentiation and not bitwise exclusive OR (as 
+ * Note that ^ is used here for exponentiation and not bitwise exclusive OR (as
  * is the case for ^ in Java)
  *
+ * <p>
  * The following unary operations are supported: factorial (!).
  *
  * @author Michael E. Cotterell
@@ -27,8 +29,8 @@ public class ReversePolishNotation {
 
     static {
         Map<String, Integer> pMap = new HashMap<String, Integer>();
-        pMap.put("<", 0);
-        pMap.put(">", 0);
+        pMap.put("<<", 0);
+        pMap.put(">>", 0);
         pMap.put("+", 1);
         pMap.put("-", 1);
         pMap.put("*", 2);
@@ -38,9 +40,9 @@ public class ReversePolishNotation {
         precedenceMap = Collections.unmodifiableMap(pMap);
     } // static
 
-    /** 
+    /**
      * Converts an expression expressed in infix notation as an array of Strings
-     * to the appropriate expression expressed in postfix notationan as an array 
+     * to the appropriate expression expressed in postfix notationan as an array
      * of Strings.
      *
      * <p>
@@ -68,9 +70,9 @@ public class ReversePolishNotation {
 
         // check the length of the expression
         if (infix.length != 0) {
-                
+
             for (int i = 0; i < infix.length; i++) {
-                        
+
                 // precedence is null for operands
                 Integer precedence = precedenceMap.get(infix[i]);
 
@@ -86,36 +88,38 @@ public class ReversePolishNotation {
                             postfix.add(opFromStack);
                         } // if
                     } // while
-                                
+
                     operatorStack.push(infix[i]);
-                                
-                } else { 
+
+                } else {
                     // current token is not an operator
                     postfix.add(infix[i]);
                 } // if
-                        
+
             } // for
-                
+
             // add the remaining operators to the postfix expression
             while (!operatorStack.isEmpty()) {
                 postfix.add(operatorStack.pop());
             } // while
-                
+
         } // if
-        
+
         return postfix.toArray(new String[postfix.size()]);
 
     } // infix2postfix
 
     /**
-     * Evaluates a mathematical expression expressed in postfix notation. This 
+     * Evaluates a mathematical expression expressed in postfix notation. This
      * method may return a DomainException if one of the operands for an
      * operation is not in correct number set. It may also return a NumberFormat
      *
      * @param impl     an instance of a Math implementation
      * @param postfix  the mathematical expression in postfix notation
      * @return the result of evaluating the expression
+     * @throws StackOverflowError  when the stack overflows
      * @throws MalformedPostfixException  when the postfix expression is malformed
+     * @throws ArithmeticException  when an implementation throws an <code>ArithmeticException</code>
      */
     public static int evaluate(Math impl, String[] postfix) throws StackOverflowError, MalformedPostfixException, ArithmeticException {
 
@@ -123,22 +127,19 @@ public class ReversePolishNotation {
         Stack<Integer> stack = new Stack<Integer>();
 
         try {
-        
+
             for (int i = 0; i < postfix.length; i++) {
 
-                if (postfix[i].length() == 1 && !Character.isDigit(postfix[i].charAt(0))) {
-
-                    // if the first character of the element is not a digit then we 
-                    // assume it is an operator
+                if (precedenceMap.keySet().contains(postfix[i])) {
 
                     String operator = postfix[i];
-		
-                    if (operator.equals("<")) {
+
+                    if (operator.equals("<<")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.lshift(lhs, rhs);
                         stack.add(result);
-                    } else if (operator.equals(">")) {
+                    } else if (operator.equals(">>")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.rshift(lhs, rhs);
@@ -183,18 +184,18 @@ public class ReversePolishNotation {
 
             } // for
 
-	} catch (ArithmeticException ae) {
-	    
-	    // propagate an arithmetic exception
-	    throw ae;
+      	} catch (ArithmeticException ae) {
+
+      	    // propagate an arithmetic exception
+      	    throw ae;
 
         } catch (Exception e) {
-            
+
             // propogate as a malformed postfix exception
             throw new MalformedPostfixException(postfix);
-            
+
         } // try
-            
+
         // if the stack size is not 1, then the expression is malformed
         if (stack.size() != 1) {
             throw new MalformedPostfixException(postfix);
@@ -203,7 +204,6 @@ public class ReversePolishNotation {
         // the only element left in the stack will be the result of the evaluation
         return stack.pop();
 
-    } // evaluate
+      } // evaluate
 
 } // ReversePolishNotation
-
