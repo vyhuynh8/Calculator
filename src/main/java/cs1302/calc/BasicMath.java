@@ -1,11 +1,11 @@
 package cs1302.calc;
 
-/** 
+/**
  * Provides a basic implementation of the operations defined in the Math
  * interface. This implementation assumes that the inputs to each method are
  * non-negative integers.
  *
- * @author Michael E. Cotterell 
+ * @author Michael E. Cotterell
  */
 public class BasicMath implements Math {
 
@@ -47,4 +47,3 @@ public class BasicMath implements Math {
     } // rshift
 
 } // BasicMath
-

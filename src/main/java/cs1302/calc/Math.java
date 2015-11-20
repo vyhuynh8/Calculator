@@ -1,6 +1,6 @@
 package cs1302.calc;
 
-/** 
+/**
  * Provides an interface for different mathematical operations over
  * non-negative integers.
  *
@@ -15,6 +15,7 @@ public interface Math {
      * The default implementation does not need to be overrident in
      * implementing classes.
      *
+     * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">The Java™ Tutorials: Default Methods</a>
      * @param n  the operand
      * @return the result of n + 1
      */
@@ -22,13 +23,14 @@ public interface Math {
         return n + 1;
     } // inc
 
-    /** 
+    /**
      * Returns the successor of the operand.
      *
      * <p>
      * The default implementation does not need to be overrident in
      * implementing classes.
-     * 
+     *
+     * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">The Java™ Tutorials: Default Methods</a>
      * @param n  the operand
      * @return the result of n + 1
      * @deprecated replaced by {@link #inc(int)}
@@ -44,7 +46,8 @@ public interface Math {
      * <p>
      * The default implementation does not need to be overrident in
      * implementing classes.
-     * 
+     *
+     * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">The Java™ Tutorials: Default Methods</a>
      * @param n  the operand
      * @return the result of <code>n - 1</code>
      */
@@ -53,9 +56,10 @@ public interface Math {
         return n - 1;
     } // dec
 
-    /** 
+    /**
      * Returns the predecessor of the operand.
-     * 
+     *
+     * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">The Java™ Tutorials: Default Methods</a>
      * @param n  the operand
      * @return the result of n - 1
      * @deprecated replaced by {@link #dec(int)}
@@ -66,13 +70,13 @@ public interface Math {
     } // pred
 
     /**
-     * Returns the result of the binary addition operation 
+     * Returns the result of the binary addition operation
      * <code>lhs + rhs</code>.
      *
      * <p>
      * The default implementation does not need to be overrident in
      * implementing classes.
-     * 
+     *
      * @param lhs  the first operand
      * @param rhs  the second operand
      * @return the result of the operation
@@ -97,11 +101,11 @@ public interface Math {
      * @param rhs  the second operand
      * @return the result of the operation
      */
-    public int  mul(int lhs, int rhs);
+    public int mul(int lhs, int rhs);
 
     /**
-     * Returns the result of the binary division operation 
-     * <code>lhs / rhs</code>. This method should throw a 
+     * Returns the result of the binary division operation
+     * <code>lhs / rhs</code>. This method should throw a
      * <code>ArithmeticException</code> if the second operand is equal to zero.
      *
      * @param lhs  the first operand
@@ -112,7 +116,7 @@ public interface Math {
     public int div(int lhs, int rhs) throws ArithmeticException;
 
     /**
-     * Returns the result of the unary factorial operation <code>num !</code>. 
+     * Returns the result of the unary factorial operation <code>num !</code>.
      *
      * @param num  the operand
      * @return the result of the operation
@@ -120,11 +124,12 @@ public interface Math {
     public int fac(int num);
 
     /**
-     * Returns the result of the binary exponentiation operation 
+     * Returns the result of the binary exponentiation operation
      * <code>lhs ^ rhs</code>. Please note that this is not equivalent to the
-     * <code>^</code> operator in Java, which represents the bitwise 
-     * exclusive-or. 
+     * <code>^</code> operator in Java, which represents the bitwise
+     * exclusive-or.
      *
+     * @see <a href="https://mitpress.mit.edu/sicp/chapter1/node15.html">SICP 1.2.4 Exponentiation</a>
      * @param lhs  the first operand
      * @param rhs  the second operand
      * @return the result of the operation
@@ -132,7 +137,7 @@ public interface Math {
     public int pow(int lhs, int rhs);
 
     /**
-     * Returns the result of the binary left-shift operation {@code lhs << rhs}. 
+     * Returns the result of the binary left-shift operation {@code lhs << rhs}.
      *
      * @param lhs  the first operand
      * @param rhs  the second operand
@@ -141,7 +146,7 @@ public interface Math {
     public int lshift(int lhs, int rhs);
 
     /**
-     * Returns the result of the binary right-shift operation {@code lhs >> rhs}. 
+     * Returns the result of the binary right-shift operation {@code lhs >> rhs}.
      *
      * @param lhs  the first operand
      * @param rhs  the second operand
@@ -150,4 +155,3 @@ public interface Math {
     public int rshift(int lhs, int rhs);
 
 } // Math
-
