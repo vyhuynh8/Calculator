@@ -138,47 +138,47 @@ public class ReversePolishNotation {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.lshift(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals(">>")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.rshift(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals("+")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.add(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals("-")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.sub(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals("*")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.mul(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals("/")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.div(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals("^")) {
                         int rhs = stack.pop();
                         int lhs = stack.pop();
                         int result = impl.pow(lhs, rhs);
-                        stack.add(result);
+                        stack.push(result);
                     } else if (operator.equals("!")) {
                         int num = stack.pop();
                         int result = impl.fac(num);
-                        stack.add(result);
+                        stack.push(result);
                     } // if
 
                 } else {
 
                     // otherwise we assume it is an operand and add it to the stack
-                    stack.add(Integer.parseInt(postfix[i]));
+                    stack.push(Integer.parseInt(postfix[i]));
 
                 } // if
 
