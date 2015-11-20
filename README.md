@@ -316,7 +316,7 @@ In order to clean your project (remove compiled code), use the following command
 In order to test your ```Math``` implementations, you may wish to run the
 integrated JUnit tests using the following command:
 
-$ ./sbt test
+    $ ./sbt test
 
 ## Submission Instructions
 
