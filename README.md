@@ -3,54 +3,54 @@
 _This project is due Friday, 2015-11-20 @ 11:55 PM EST._
 
 Skeleton code for the Calculator project assigned to the students in the
-Fall 2015 CSCI 1302 classes at the University of Georgia. **Please read 
+Fall 2015 CSCI 1302 classes at the University of Georgia. **Please read
 the entirety of this file before beginning your project.**
 
 ## Academic Honesty
 
-You implicitly agree to Academic Honesty policy as outlined in the course 
+You implicitly agree to Academic Honesty policy as outlined in the course
 syllabus.
 
 In accordance with the notice above, I must caution you to **not** fork this
 repository on GitHub if you have an account. Doing so will more than likely make
-your copy of the project publicly visible. Please follow the instructions 
+your copy of the project publicly visible. Please follow the instructions
 contained in the Resources section below in order to do your development on
 <code>nike</code>.
 
 ## Collaboration Policy
 
-Students are required to work in groups of two for this project. Furthermore, 
-each group needs to engage in pair programming. Pair programming is an agile 
-software development technique in which two programmers work together at one 
-workstation. One, the driver, writes code while the other, the navigator, 
-reviews each line of code as it is typed in. The two programmers switch roles 
+Students are required to work in groups of two for this project. Furthermore,
+each group needs to engage in pair programming. Pair programming is an agile
+software development technique in which two programmers work together at one
+workstation. One, the driver, writes code while the other, the navigator,
+reviews each line of code as it is typed in. The two programmers switch roles
 frequently.
 
-Yes, this involves physically meeting with your partner. Not being able to find 
-time is NOT an excuse for not participating. If you need a place to meet and 
-work on the project then I suggest the 307 lab in Boyd. The iMacs are already 
+Yes, this involves physically meeting with your partner. Not being able to find
+time is NOT an excuse for not participating. If you need a place to meet and
+work on the project then I suggest the 307 lab in Boyd. The iMacs are already
 setup with everything you need. You login to them with your <code>nike</code>
 account, open up the terminal application and SSH into your <code>nike</code>
 account.
 
-Furthermore, we will track your progress using Git commit logs. You will be 
-required to use Git for this project. A portion of your grade will be determined 
+Furthermore, we will track your progress using Git commit logs. You will be
+required to use Git for this project. A portion of your grade will be determined
 based on you and your partner's Git log. Please follow the directions outlined in
-the resources section carefully in order to make sure and your partner have this 
+the resources section carefully in order to make sure and your partner have this
 setup properly.
 
 ### Some Pair Programming Guidelines
 
- * You and your partner should work together as much as possible, with the 
-   stipulation that at most 25% of your total time coding, testing, and 
+ * You and your partner should work together as much as possible, with the
+   stipulation that at most 25% of your total time coding, testing, and
    debugging on the assignment can be done alone.
 
- * When the pair gets back together after either partner has worked on the 
-   code alone, review, line by line, the work done alone before doing any new 
-   work. This is really easy if each person maintains their own branch and 
-   commits as they work. 
+ * When the pair gets back together after either partner has worked on the
+   code alone, review, line by line, the work done alone before doing any new
+   work. This is really easy if each person maintains their own branch and
+   commits as they work.
 
- * You and your partner should alternate driving and navigating, spending 
+ * You and your partner should alternate driving and navigating, spending
    roughly equal amounts of time in each role.
 
  * After the project is completed, a pair programming survey will be made
@@ -68,14 +68,14 @@ I highly recommend that you follow the following workflow for development:
    You will need to follow the GitHub handout linked below in order for this
    to work correctly.
 
- * When working alone, use your own _personal_ branch, committing often. When 
+ * When working alone, use your own _personal_ branch, committing often. When
    you get back together with your partner, merge both personal branches into
    <code>master</code> and review the commit log. Once you've fixed merge
    conflicts, push your merged <code>master</code> branch to GitHub before
    continuing with your work.
 
 I know some of these suggestions sound like overkill, but they will make your
-life a lot easier if you learn how to take advantage of them properly. 
+life a lot easier if you learn how to take advantage of them properly.
 
 ## Project Description
 
@@ -83,24 +83,24 @@ life a lot easier if you learn how to take advantage of them properly.
 
 Your goal is to develop a calculator app in Java 8 with a graphical user interface
 (GUI) powered by JavaFX. You will be responsible for designing and implementing
-the user interface for your project (following a few guidelines). This 
-calculator app is interesting in that we will provide two different 
+the user interface for your project (following a few guidelines). This
+calculator app is interesting in that we will provide two different
 implementations for handling mathematical operations: an iterative
-implementation (loops) and a recursive implementation. This will be accomplished by 
-implementing the <code>Math</code> interface in two classes, 
+implementation (loops) and a recursive implementation. This will be accomplished by
+implementing the <code>Math</code> interface in two classes,
 <code>IterativeMath</code> and <code>RecursiveMath</code>.
 
 ## Project Tasks
 
 Before you submit your project, you need to perform the following tasks:
 
- 1. (10 points) Implement a iterative implementation of the <code>Math</code> 
-    interface in the <code>IterativeMath</code> class. The implementations for 
-    **all** the methods in this class are to be non-recursive. They are to be 
+ 1. (10 points) Implement a iterative implementation of the <code>Math</code>
+    interface in the <code>IterativeMath</code> class. The implementations for
+    **all** the methods in this class are to be non-recursive. They are to be
     writen using iteration/loops. Just to be clear, you are NOT allowed to
     implement these functions the naive way. For example, you cannot implement
     addition as <code>return lhs + rhs</code>. You must implement it using a
-    loop. In fact, here is an example of how to implement the 
+    loop. In fact, here is an example of how to implement the
     <code>add</code> method:
     ```java
     public int add(int lhs, int rhs) {
@@ -113,49 +113,49 @@ Before you submit your project, you need to perform the following tasks:
     } // add
     ```
     There are some more notes on implementing math functions in another
-    section below. 
+    section below.
 
- 2. (10 points) Implement a recursive implementation of the <code>Math</code> 
-    interface in the <code>RecursiveMath</code> class. the implementations for 
+ 2. (10 points) Implement a recursive implementation of the <code>Math</code>
+    interface in the <code>RecursiveMath</code> class. the implementations for
     **all** the methods in this class are to be recursive. You are not required
     to use accumulator recursion, however, doing so will make the transition
     from iteration to recursion a lot easier, especially for the math methods
-    we haven't explicitly covered in class. There are some more notes on 
-    implementing math functions in another section below. 
+    we haven't explicitly covered in class. There are some more notes on
+    implementing math functions in another section below.
 
- 3. (20 points) Design your calculator's GUI interface. You can use 
-    a mock-up tool such as [Creately](http://creately.com/Online-UI-Mockups-and-Wireframes) 
-    or [Pencil](http://pencil.evolus.vn/) (or similar) to make this 
+ 3. (20 points) Design your calculator's GUI interface. You can use
+    a mock-up tool such as [Creately](http://creately.com/Online-UI-Mockups-and-Wireframes)
+    or [Pencil](http://pencil.evolus.vn/) (or similar) to make this
     easier. Your GUI should allow users to take advantage of all of the
     operators defined in the <code>Math</code> interface. You mockup and final
-    program need to contain the following elements: 
+    program need to contain the following elements:
 
-     * Text field for the mathematical expressions and the computed numbers; 
+     * Text field for the mathematical expressions and the computed numbers;
      * A button to switch between using "iteration" and "recursion," updating the UI appropriately;
      * The ability to toggle individual bits on and off, updating the UI appropriately.
 
-    Your GUI must make use of some of the styling facilities available in JavaFX. 
-    You will include your mockups in the <code>MOCKUP.md</code> file. 
+    Your GUI must make use of some of the styling facilities available in JavaFX.
+    You will include your mockups in the <code>MOCKUP.md</code> file.
 
  4. (50 points) Implement a GUI interface for your calculator app
-    using JavaFX. 
-    Your GUI must include the elements you described in your mockups. 
+    using JavaFX.
+    Your GUI must include the elements you described in your mockups.
     The skeleton code is already setup for a basic JavaFX FXML application.
 
  5. (10 points) Ensure that your code is properly documented using both
-    Javadoc comments and inline comments as 
+    Javadoc comments and inline comments as
     necessary. In general, you should describe in regular terms what it is the
     code that you are writing is doing. A small example of such comments can be
-    <code>Calculator</code> class. Please note that you do not need to write 
-    Javadoc comments for the methods that implement methods in the 
-    <code>Math</code> interface as they will inherit the comments from the 
+    <code>Calculator</code> class. Please note that you do not need to write
+    Javadoc comments for the methods that implement methods in the
+    <code>Math</code> interface as they will inherit the comments from the
     interface. However, if you create any new
     methods or classes then they will need to be properly documented using
     Javadoc comments and tags. We will be using <code>./sbt doc</code> in order to
     check that you've properly written Javadoc comments for all of your methods.
 
- 6. Update the <code>README.md</code> in your project directory to contain the 
-    following information at the top of the file (updating it with your own 
+ 6. Update the <code>README.md</code> in your project directory to contain the
+    following information at the top of the file (updating it with your own
     information:
 
     ```markdown
@@ -171,7 +171,7 @@ Before you submit your project, you need to perform the following tasks:
 
 You may earn up to 20 points extra credit for each of the tasks listed below:
 
- 1. (20 points) When the Konami code is entered (you know the code by now), 
+ 1. (20 points) When the Konami code is entered (you know the code by now),
     a playable game of Pong pops up, implemented in wither Swing or JavaFX.
     If you do this extra credit, please indicate that in your
     <code>README.md</code> file.
@@ -180,11 +180,11 @@ You may earn up to 20 points extra credit for each of the tasks listed below:
 
 Included with this project is an implementation of a <code>ReversePolishNotation</code>
 class written by your instructor that provides a static method for converting a
-mathematical expression represented in infix notation into one that is expressed 
-in post-fix notation (also known as Reverse Polish Notation). There is also a 
-static method provided to evaluate a mathematical expression represented in 
-post-fix notation given an implementation of the <code>Math</code> interface is 
-also provided. 
+mathematical expression represented in infix notation into one that is expressed
+in post-fix notation (also known as Reverse Polish Notation). There is also a
+static method provided to evaluate a mathematical expression represented in
+post-fix notation given an implementation of the <code>Math</code> interface is
+also provided.
 
 You do not need to understand the exact details of what RPN is in order to complete
 this project, however, you do need to understand what the input to the <code>infixToPostfix</code>
@@ -210,7 +210,7 @@ Math iterativeMath = new IterativeMath();
 int result = ReversePolishNotation.evaluate(iterativeMath, postfix);
 ```
 
-Note: If an element of the infix array contains a number prefixed with a minus 
+Note: If an element of the infix array contains a number prefixed with a minus
 sign then that number is treated as a negative number.
 
 For more general information on RPN, you can read its' WikiPedia page here:
@@ -227,7 +227,7 @@ implementing.
     These implementations will be similar to the examples provided
     in lecture, except that the successor and predecessor methods have
     been renamed to <code>inc</code> (increment) and <code>dec</code>
-    (decrement). 
+    (decrement).
 
  2. In the <code>multiply</code> and <code>divide</code> methods, if you need
     to add and subtract numbers that are greater than 1, you may do so only by
@@ -242,21 +242,21 @@ A suggested mock-up of the graphical user interface is provided below.
 ![Calculator UI Mock-up](http://i.imgur.com/1K8mRIZ.png)
 
 Your GUI should incorporate at least the same functionality as the one in the
-above mock-up. The meaning for most of the buttons is obvious. The <code><</code> 
+above mock-up. The meaning for most of the buttons is obvious. The <code><</code>
 button means backspace. The <code>X</code> button means clear the text area.
-The <code>Use Recursion</code> button should toggle between "Use Recursion" and use 
+The <code>Use Recursion</code> button should toggle between "Use Recursion" and use
 "Use Iteration", depending on which implementation of the <code>Math</code> interface
-your code is using. In the mock-up above, the app is currently using the 
-<code>IterativeMath</code> class as its' <code>Math</code> implementation. The 
-<code>^</code> button is for exponentiation and the <code>!</code> button is for 
+your code is using. In the mock-up above, the app is currently using the
+<code>IterativeMath</code> class as its' <code>Math</code> implementation. The
+<code>^</code> button is for exponentiation and the <code>!</code> button is for
 factorial. There are also buttons displayed for the left shift and right shift
-operators. 
+operators.
 
 The binary digits are meant to be toggled. For example, clicking on the bit in
 position 0 should change the result number to 15560. If the result number
 changes, then the corresponding binary representation should also change. If
-you are not too familiar with binary, then check out the following 
-resource: [http://michaelcotterell.com/blog/2015/4/on-bits](http://michaelcotterell.com/blog/2015/4/on-bits). 
+you are not too familiar with binary, then check out the following
+resource: [http://michaelcotterell.com/blog/2015/4/on-bits](http://michaelcotterell.com/blog/2015/4/on-bits).
 
 ## Resources
 
@@ -265,26 +265,26 @@ an SSH public for your <code>nike</code> account. You can find some instructions
 at the following website: https://help.github.com/articles/generating-ssh-keys#platform-all.
 
 The files for this project are hosted Github using <code>git</code>. They can be
-retrieved by cloning the repository found at <code>git://github.com/mepcotterell-cs1302/cs1302-calculator.git</code>. 
+retrieved by cloning the repository found at <code>git://github.com/mepcotterell-cs1302/cs1302-calculator.git</code>.
 
 You should receive an eamil that explains what you need to do
 in order to set everything up. Additionally, I've created a
-handout that describes how to use Git with this project. It is available 
+handout that describes how to use Git with this project. It is available
 [here](https://www.dropbox.com/s/hnxmwr4ww7wo4nm/GitHub.pdf?dl=0).
 
 --> https://www.dropbox.com/s/hnxmwr4ww7wo4nm/GitHub.pdf?dl=0
 
 As always, I suggest developing directly on <code>nike.cs.uga.edu</code> because
-this is where your project will be run and tested. Since <code>git</code> is 
-already installed on <code>nike</code>, you can clone the project directly int your 
+this is where your project will be run and tested. Since <code>git</code> is
+already installed on <code>nike</code>, you can clone the project directly int your
 <code>nike</code> home directory.
 
 If any changes are made to the project description or skeleton code, they will
-be announced in class. In order to incorporate such changes into your code, you 
+be announced in class. In order to incorporate such changes into your code, you
 need only do a <code>git pull</code>.
 
 Also, since <code>git</code> is a decentralized version control system, you will
-have your own local copy of the repository. This means that you can log your 
+have your own local copy of the repository. This means that you can log your
 changes using commits and even revert to a previous revision if necessary.
 
 ## Directory Structure and Packages
@@ -293,14 +293,14 @@ All of the non-test classes for this project should be contained in the <code>sr
 directory. These classes are in the <code>cs1302.calc</code> package.
 
 All of the JUnit test classes for this project should be contained in the <code>src/test/java/cs1302/calc</code>
-directory. These classes are also contained in the <code>cs1302.calc</code> 
+directory. These classes are also contained in the <code>cs1302.calc</code>
 package so that you do not need to do any imports to test your own code.
 
 
 ## Build System
 
-For this project, we will be using the Simple Build System (sbt). If you clone 
-the project from the GitHub repository then everything will be setup for you. In 
+For this project, we will be using the Simple Build System (sbt). If you clone
+the project from the GitHub repository then everything will be setup for you. In
 order to compile your project, you can use the following command:
 
     $ ./sbt compile
@@ -313,6 +313,11 @@ In order to clean your project (remove compiled code), use the following command
 
     $ ./sbt clean
 
+In order to test your ```Math``` implementations, you may wish to run the
+integrated JUnit tests using the following command:
+
+$ ./sbt test
+
 ## Submission Instructions
 
 In addition to submitting using the <code>submit</code> command below, you will also
@@ -320,8 +325,8 @@ need to push your final changes to your GitHub repository. The grader will be cl
 your GitHub repository and testing your code that way. The submission instructions
 presented below will be used as a backup in case something goes wrong.
 
-You will still be submitting your project via <code>nike</code>. Make sure your 
-work is on <code>nike.cs.uga.edu</code> in a directory called 
+You will still be submitting your project via <code>nike</code>. Make sure your
+work is on <code>nike.cs.uga.edu</code> in a directory called
 <code>LastName1-LastName2-p3</code>, and, from within the parent directory,
 execute the following command, depending on which section you are in:
 
@@ -333,7 +338,7 @@ execute the following command, depending on which section you are in:
 
     $ submit LastName-FirstName-p2 cs1302b
 
-It is also a good idea to email a copy to yourself. To do this, simply execute 
+It is also a good idea to email a copy to yourself. To do this, simply execute
 the following command, replacing the email address with your email address:
 
     $ tar zcvf LastName1-LastName2-p3.tar.gz LastName1-LastName2-p3
@@ -341,14 +346,14 @@ the following command, replacing the email address with your email address:
 
 ## Questions
 
-If you have any questions, please email them to Michael E. Cotterell at 
+If you have any questions, please email them to Michael E. Cotterell at
 <code>mepcott@uga.edu</code>
 
 ## Frequently Asked Questions
 
  1. What do I do if the <code>sbt</code> command does not execute?
 
-    You probably need to make the file executable. To do this, simply make sure 
+    You probably need to make the file executable. To do this, simply make sure
     you are in the same directory as <code>sbt</code> and issue the following
     command:
 
@@ -367,10 +372,10 @@ If you have any questions, please email them to Michael E. Cotterell at
     ```
 
     These are NOT errors with your program. They have to do with drivers on Nike.
-    You do NOT need to worry if you see the above errors. 
+    You do NOT need to worry if you see the above errors.
 
- 3. When I execute the <code>sbt run</code> command on <code>nike</code>, I get 
-    a <code>java.awt.HeadlessException</code> that tells me no X11 DISPLAY 
+ 3. When I execute the <code>sbt run</code> command on <code>nike</code>, I get
+    a <code>java.awt.HeadlessException</code> that tells me no X11 DISPLAY
     variable was set, but this program performed an operation which requires it.
     What is going on and how do I fix it?
 
@@ -387,7 +392,7 @@ If you have any questions, please email them to Michael E. Cotterell at
     If you are using MacOS X and are unable to resolve your problem simply by
     issuing the above command then you need to download and install a program
     called XQuartz and restart your Mac. After following the steps on that
-    website, try logging into nike using the 
+    website, try logging into nike using the
     SSH command above.
 
     Alternatively, you may trying logging in with unsecured X11 forwarding using the
@@ -395,9 +400,9 @@ If you have any questions, please email them to Michael E. Cotterell at
 
         $ ssh -Y username@nike.cs.uga.edu
 
-    If you are connecting to <code>nike</code> using PuTTY on Windows then you 
+    If you are connecting to <code>nike</code> using PuTTY on Windows then you
     need to download and install Xming. For information about how to setup Xming
     with Putty, please follow the directions [here](http://blog.nth-design.com/2010/05/19/x11-putty-xming/).
-    You may skip some of the steps on that website (e.g., the section on 
+    You may skip some of the steps on that website (e.g., the section on
     downloading and installing PuTTY), however, please read all of the sections
     related to Xming as wells the sections related to configuring PuTTY.\
