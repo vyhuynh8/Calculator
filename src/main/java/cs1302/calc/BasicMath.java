@@ -38,12 +38,4 @@ public class BasicMath implements Math {
         return (int) java.lang.Math.pow(lhs, rhs);
     } // pow
 
-    public int lshift(int lhs, int rhs) {
-        return lhs << rhs;
-    } // lshift
-
-    public int rshift(int lhs, int rhs) {
-        return lhs >> rhs;
-    } // rshift
-
 } // BasicMath

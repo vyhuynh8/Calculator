@@ -138,20 +138,32 @@ public interface Math {
 
     /**
      * Returns the result of the binary left-shift operation {@code lhs << rhs}.
+     * The result of this operation is equivalent to multiplying the
+     * <code>lhs</code> by <code>2 ^ rhs</code> where <code>^</code> represents
+     * exponentiation.
      *
+     * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">The Java™ Tutorials: Default Methods</a>
      * @param lhs  the first operand
      * @param rhs  the second operand
      * @return the result of the operation
      */
-    public int lshift(int lhs, int rhs);
+    public default int lshift(int lhs, int rhs) {
+        return mul(lhs, pow(2, rhs));
+    } // lshift
 
     /**
      * Returns the result of the binary right-shift operation {@code lhs >> rhs}.
+     * The result of this operation is equivalent to integer dividing the
+     * <code>lhs</code> by <code>2 ^ rhs</code> where <code>^</code> represents
+     * exponentiation.
      *
+     * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">The Java™ Tutorials: Default Methods</a>
      * @param lhs  the first operand
      * @param rhs  the second operand
      * @return the result of the operation
      */
-    public int rshift(int lhs, int rhs);
+    public default int rshift(int lhs, int rhs) {
+        return div(lhs, pow(2, rhs));
+    } // rshift
 
 } // Math

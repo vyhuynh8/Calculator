@@ -38,18 +38,9 @@ public class IterativeMath implements Math {
     public int fac(int n) {
         throw new UnsupportedOperationException();
     } // fac
-    
+
     public int pow(int lhs, int rhs) {
         throw new UnsupportedOperationException();
     } // pow
-    
-    public int lshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
-    } // lshift
-    
-    public int rshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
-    } // rshift
 
 } // IterativeMath
-

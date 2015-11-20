@@ -304,7 +304,7 @@ public class BasicMathTest {
         try {
             assertTrue("lshift(1, 0) != 1",  impl.lshift(1, 0) == 1);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testLshift1
 
@@ -313,7 +313,7 @@ public class BasicMathTest {
         try {
             assertTrue("lshift(1, 1) != 2",  impl.lshift(1, 1) == 2);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testLshift2
 
@@ -322,7 +322,7 @@ public class BasicMathTest {
         try {
             assertTrue("lshift(1, 2) != 4",  impl.lshift(1, 2) == 4);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testLshift3
 
@@ -331,7 +331,7 @@ public class BasicMathTest {
         try {
             assertTrue("lshift(1, 3) != 8",  impl.lshift(1, 3) == 8);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testLshift4
 
@@ -340,7 +340,7 @@ public class BasicMathTest {
         try {
             assertTrue("rshift(4, 0) != 4",  impl.rshift(4, 0) == 4);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testRshift1
 
@@ -349,7 +349,7 @@ public class BasicMathTest {
         try {
             assertTrue("rshift(4, 1) != 2",  impl.rshift(4, 1) == 2);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testRshift2
 
@@ -358,7 +358,7 @@ public class BasicMathTest {
         try {
             assertTrue("rshift(4, 2) != 1",  impl.rshift(4, 2) == 1);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testRshift3
 
@@ -367,7 +367,7 @@ public class BasicMathTest {
         try {
             assertTrue("rshift(4, 3) != 0",  impl.rshift(4, 3) == 0);
         } catch (UnsupportedOperationException e) {
-            assertTrue("not implemented", false);
+            assertTrue("dependent methods not implemented", false);
         } // try
     } // testRshift4
 
