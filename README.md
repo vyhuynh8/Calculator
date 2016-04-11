@@ -1,9 +1,9 @@
 # CSCI 1302 - Calculator Project (cs1302-calculator)
 
-_This project is due Friday, 2015-11-20 @ 11:55 PM EST._
+_This project is due Sunday, 2015-04-24 @ 11:55 PM EST._
 
 Skeleton code for the Calculator project assigned to the students in the
-Fall 2015 CSCI 1302 classes at the University of Georgia. **Please read
+Spring 2016 CSCI 1302 classes at the University of Georgia. **Please read
 the entirety of this file before beginning your project.**
 
 ## Academic Honesty
@@ -32,50 +32,6 @@ work on the project then I suggest the 307 lab in Boyd. The iMacs are already
 setup with everything you need. You login to them with your <code>nike</code>
 account, open up the terminal application and SSH into your <code>nike</code>
 account.
-
-Furthermore, we will track your progress using Git commit logs. You will be
-required to use Git for this project. A portion of your grade will be determined
-based on you and your partner's Git log. Please follow the directions outlined in
-the resources section carefully in order to make sure and your partner have this
-setup properly.
-
-### Some Pair Programming Guidelines
-
- * You and your partner should work together as much as possible, with the
-   stipulation that at most 25% of your total time coding, testing, and
-   debugging on the assignment can be done alone.
-
- * When the pair gets back together after either partner has worked on the
-   code alone, review, line by line, the work done alone before doing any new
-   work. This is really easy if each person maintains their own branch and
-   commits as they work.
-
- * You and your partner should alternate driving and navigating, spending
-   roughly equal amounts of time in each role.
-
- * After the project is completed, a pair programming survey will be made
-   available for both partners to complete.
-
-### Suggestions
-
-I highly recommend that you follow the following workflow for development:
-
- * When working with your partner, work in the <code>master</code> branch.
-
- * Commit often using <code>git commit -am "place log message here"</code>.
-
- * Push your branches to GitHub often using <code>git push remote origin</code>.
-   You will need to follow the GitHub handout linked below in order for this
-   to work correctly.
-
- * When working alone, use your own _personal_ branch, committing often. When
-   you get back together with your partner, merge both personal branches into
-   <code>master</code> and review the commit log. Once you've fixed merge
-   conflicts, push your merged <code>master</code> branch to GitHub before
-   continuing with your work.
-
-I know some of these suggestions sound like overkill, but they will make your
-life a lot easier if you learn how to take advantage of them properly.
 
 ## Project Description
 
@@ -169,9 +125,9 @@ Before you submit your project, you need to perform the following tasks:
 
 ## Extra Credit Project Tasks
 
-You may earn up to 20 points extra credit for each of the tasks listed below:
+You may earn up to 10 points extra credit for each of the tasks listed below:
 
- 1. (20 points) When the Konami code is entered (you know the code by now),
+ 1. (10 points) When the Konami code is entered (you know the code by now),
     a playable game of Pong pops up, implemented in wither Swing or JavaFX.
     If you do this extra credit, please indicate that in your
     <code>README.md</code> file.
@@ -260,19 +216,10 @@ resource: [http://michaelcotterell.com/blog/2015/4/on-bits](http://michaelcotter
 
 ## Resources
 
-**Note:** In order to follow some of the instructions below, you'll need to generate
-an SSH public for your <code>nike</code> account. You can find some instructions on that
-at the following website: https://help.github.com/articles/generating-ssh-keys#platform-all.
-
 The files for this project are hosted Github using <code>git</code>. They can be
 retrieved by cloning the repository found at <code>git://github.com/mepcotterell-cs1302/cs1302-calculator.git</code>.
 
-You should receive an eamil that explains what you need to do
-in order to set everything up. Additionally, I've created a
-handout that describes how to use Git with this project. It is available
-[here](https://www.dropbox.com/s/hnxmwr4ww7wo4nm/GitHub.pdf?dl=0).
-
---> https://www.dropbox.com/s/hnxmwr4ww7wo4nm/GitHub.pdf?dl=0
+    $ git clone git://github.com/mepcotterell-cs1302/cs1302-calculator.git LastName1-LastName2-p4
 
 As always, I suggest developing directly on <code>nike.cs.uga.edu</code> because
 this is where your project will be run and tested. Since <code>git</code> is
@@ -320,29 +267,28 @@ integrated JUnit tests using the following command:
 
 ## Submission Instructions
 
-In addition to submitting using the <code>submit</code> command below, you will also
-need to push your final changes to your GitHub repository. The grader will be cloning
-your GitHub repository and testing your code that way. The submission instructions
-presented below will be used as a backup in case something goes wrong.
-
 You will still be submitting your project via <code>nike</code>. Make sure your
 work is on <code>nike.cs.uga.edu</code> in a directory called
-<code>LastName1-LastName2-p3</code>, and, from within the parent directory,
+<code>LastName1-LastName2-p4</code>, and, from within the parent directory,
 execute the following command, depending on which section you are in:
 
-### Supa' Mike's (Cotterell's) Section
+### CRN 26245
 
-    $ submit LastName-FirstName-p2 cs1302a
+    $ submit LastName1-LastName2-p4 cs1302a
 
-### Alothman's Section
+### CRN 26311
 
-    $ submit LastName-FirstName-p2 cs1302b
+    $ submit LastName1-LastName2-p4 cs1302b
+
+### CRN 36424
+
+    $ submit LastName1-LastName2-p4 cs1302c
 
 It is also a good idea to email a copy to yourself. To do this, simply execute
 the following command, replacing the email address with your email address:
 
-    $ tar zcvf LastName1-LastName2-p3.tar.gz LastName1-LastName2-p3
-    $ mutt -s "[cs1302] p3" -a LastName1-LastName2-p3.tar.gz -- your@email.com < /dev/null
+    $ tar zcvf LastName1-LastName2-p4.tar.gz LastName1-LastName2-p4
+    $ mutt -s "[cs1302] p4" -a LastName1-LastName2-p4.tar.gz -- your@email.com < /dev/null
 
 ## Questions
 
