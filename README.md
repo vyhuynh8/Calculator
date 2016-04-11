@@ -97,6 +97,7 @@ Before you submit your project, you need to perform the following tasks:
     using JavaFX.
     Your GUI must include the elements you described in your mockups.
     The skeleton code is already setup for a basic JavaFX FXML application.
+    However, you are not required to use FXML if you do not want to.
 
  5. (10 points) Ensure that your code is properly documented using both
     Javadoc comments and inline comments as
