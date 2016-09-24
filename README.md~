@@ -1,3 +1,37 @@
+# CSCI 1302 - Calculator Project (cs1302-calculator)
+
+_This project is due Sunday, 2015-04-24 @ 11:55 PM EST._
+
+Skeleton code for the Calculator project assigned to the students in the
+Spring 2016 CSCI 1302 classes at the University of Georgia. **Please read
+the entirety of this file before beginning your project.**
+
+## Academic Honesty
+
+You implicitly agree to Academic Honesty policy as outlined in the course
+syllabus.
+
+In accordance with the notice above, I must caution you to **not** fork this
+repository on GitHub if you have an account. Doing so will more than likely make
+your copy of the project publicly visible. Please follow the instructions
+contained in the Resources section below in order to do your development on
+<code>nike</code>.
+
+## Collaboration Policy
+
+Students are required to work in groups of two for this project. Furthermore,
+each group needs to engage in pair programming. Pair programming is an agile
+software development technique in which two programmers work together at one
+workstation. One, the driver, writes code while the other, the navigator,
+reviews each line of code as it is typed in. The two programmers switch roles
+frequently.
+
+Yes, this involves physically meeting with your partner. Not being able to find
+time is NOT an excuse for not participating. If you need a place to meet and
+work on the project then I suggest the 307 lab in Boyd. The iMacs are already
+setup with everything you need. You login to them with your <code>nike</code>
+account, open up the terminal application and SSH into your <code>nike</code>
+account.
 
 ## Project Description
 
